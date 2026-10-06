@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Март багшдаа ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 20% 20%, #3fa1e8 0%, transparent 30%),
+                radial-gradient(circle at 80% 80%, #a8c7ff 0%, transparent 30%),
+                linear-gradient(135deg, #4b6192, #325bac, #7999f7);
+        }
+
+        /* Background stars */
+        .star {
+            position: absolute;
+            color: white;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        .star:nth-child(1) {
+            top: 10%;
+            left: 15%;
+            font-size: 15px;
+        }
+
+        .star:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            font-size: 10px;
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(3) {
+            bottom: 15%;
+            left: 12%;
+            font-size: 20px;
+            animation-delay: 0.5s;
+        }
+
+        .star:nth-child(4) {
+            bottom: 20%;
+            right: 10%;
+            font-size: 28px;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Main card */
+        .card {
+            width: 90%;
+            max-width: 650px;
+            padding: 50px 40px;
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 35px;
+
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.25),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
+
+            color: white;
+            position: relative;
+            z-index: 2;
+
+            animation: appear 1.2s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .teachers {
+            font-size: 70px;
+            margin-bottom: 15px;
+
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+
+            text-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .divider {
+            width: 100px;
+            height: 4px;
+            background: white;
+            border-radius: 10px;
+            margin: 25px auto;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 32px;
+
+            border: none;
+            border-radius: 50px;
+
+            background: linear-gradient(135deg,
+                    #3d5d83,
+                    #3f597f);
+
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-5px) scale(1.05);
+
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        #message {
+            display: none;
+
+            margin-top: 25px;
+            padding: 20px;
+
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, 0.2);
+
+            font-size: 20px;
+            line-height: 1.6;
+
+            animation: message 0.7s ease;
+        }
+
+        @keyframes message {
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Floating flowers */
+        .flower {
+            position: absolute;
+            bottom: -50px;
+
+            font-size: 30px;
+
+            animation: flowerFloat 8s linear infinite;
+
+            opacity: 0.8;
+        }
+
+        .flower:nth-of-type(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .flower:nth-of-type(2) {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .flower:nth-of-type(3) {
+            left: 55%;
+            animation-delay: 4s;
+        }
+
+        .flower:nth-of-type(4) {
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        @keyframes flowerFloat {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .card {
+                padding: 35px 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .teachers {
+                font-size: 55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Stars -->
+    <div class="star">✨</div>
+    <div class="star">⭐</div>
+    <div class="star">✨</div>
+    <div class="star">✨</div>
+
+    <!-- Floating flowers -->
+    <div class="flower">🌸</div>
+    <div class="flower">🌷</div>
+    <div class="flower">💐</div>
+    <div class="flower">🌺</div>
+
+    <!-- Main -->
+    <div class="card">
+
+        <div class="teachers">
+            Март багшдаа
+        </div>
+
+        <h1>
+            <br>
+            Багш нарын баярын мэнд хүргэе! ❤️
+        </h1>
+
+        <div class="divider"></div>
+
+        <p class="subtitle">
+            Бидэнд эрдэм мэдлэг зааж,
+            амьдралын зөв замыг зааж чиглүүлдэг
+            эрхэм багшдаа
+            чин сэтгэлийн талархал
+            илэрхийлье. 🌷
+        </p>
+
+        <p class="subtitle">
+            Таны хичээл зүтгэл,
+            хайр халамж, үнэтэй зөвлөгөө
+            бидний ирээдүйн гэрэл гэгээ билээ. ✨
+        </p>
+
+        <button onclick="showMessage()">
+            💌 Мэндчилгээг нээх
+        </button>
+
+        <div id="message">
+            Бидэнд эрдэм мэдлэг, үнэтэй зөвлөгөө өгч,
+            хичээл бүрээрээ шинэ зүйл мэдүүлдэгт тань баярлалаа. 📚🌷
+
+            Танд эрүүл энх, аз жаргал,
+            ажил үйлсэд тань өндөр амжилт хүсье.
+            Үргэлж инээмсэглэж,хамгийн сайхан бүхнийг хүсэн ерөөе. ❤️! <br>
+
+            <br><br>
+            <strong>
+                Биднийг үргэлж дэмжиж байдагт баярлалаа! ❤️
+                Хүндэтгэсэн: 12-1 Г.Мишээл
+            </strong>
+        </div>
+
+    </div>
+
+    <script>
+        function showMessage() {
+
+            const message = document.getElementById("message");
+            const button = document.querySelector("button");
+
+            if (message.style.display === "block") {
+
+                message.style.display = "none";
+                button.innerHTML = "💌 Мэндчилгээг нээх";
+
+            } else {
+
+                message.style.display = "block";
+                button.innerHTML = "❤️ Хаах!";
+
+                createHearts();
+            }
+        }
+
+        function createHearts() {
+
+            for (let i = 0; i < 15; i++) {
+
+                const heart = document.createElement("div");
+
+                heart.innerHTML = "❤️";
+
+                heart.style.position = "fixed";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.bottom = "-30px";
+                heart.style.fontSize =
+                    (15 + Math.random() * 25) + "px";
+
+                heart.style.zIndex = "10";
+
+                heart.style.animation =
+                    "heartUp 4s linear forwards";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 4000);
+            }
+        }
+
+        const style = document.createElement("style");
+
+        style.innerHTML = `
+            @keyframes heartUp {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateY(-100vh)
+                               rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+
+        document.head.appendChild(style);
+    </script>
+
+</body>
+
+</html>
